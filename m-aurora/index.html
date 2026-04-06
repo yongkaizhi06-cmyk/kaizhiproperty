@@ -130,6 +130,10 @@ th.col-aurora{color:#20c49a !important;font-weight:700}
 
 /* GALLERY */
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:768px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .coliving-grid{grid-template-columns:1fr !important}
+}
 .gallery-grid .span2{grid-column:span 2}
 .gallery-item{border-radius:10px;overflow:hidden;aspect-ratio:16/9;position:relative}
 .gallery-item.tall{aspect-ratio:4/5}
@@ -729,7 +733,7 @@ footer .fl{color:#20c49a;font-weight:700;font-size:0.88rem;margin-bottom:5px}
   <!-- Income Comparison: Normal vs Co-Living with room breakdown -->
   <h3 style="font-size:1rem;font-weight:700;color:#e6edf3;margin-bottom:6px">整体出租 vs Co-Living 月收入对比</h3>
   <p style="font-size:0.78rem;color:#8b949e;margin-bottom:20px">Co-Living 方案把客厅改建为独立小房，每个空间都产生收益。</p>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px" class="coliving-grid">
 
     <!-- TYPE A -->
     <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
