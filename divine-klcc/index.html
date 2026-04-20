@@ -5,7 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Divine KLCC — Kai Zhi Property | From RM 730,000</title>
 <meta name="description" content="Divine KLCC — 83 floors, 316m tall, 400m from Petronas Twin Towers. Nett price from RM 730,000. Airbnb-ready serviced residences managed by Maple Home.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#080D18">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#080D18">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
@@ -476,6 +484,7 @@ footer{
 <nav id="nav">
   <div style="display:flex;align-items:center;gap:10px"><img src="images/img_00.png" alt="Kai Zhi Property" style="height:38px;width:auto;display:block"><div class="nav-logo">Kai <strong>Zhi</strong> Property</div></div>
   <ul class="nav-links">
+    <li><a href="#vrtour">360° Tour</a></li>
     <li><a href="#location">Location</a></li>
     <li><a href="#units">Units</a></li>
     <li><a href="#calculator">Returns</a></li>
@@ -494,6 +503,7 @@ footer{
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <div style="display:flex;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid rgba(196,162,101,.15);margin-bottom:8px"><img src="images/img_01.png" alt="Kai Zhi Property" style="height:34px;width:auto"><span style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold3);font-weight:300">Kai <strong>Zhi</strong> Property</span></div>
+  <a href="#vrtour" onclick="closeMobile()" style="color:var(--gold2)">360° Virtual Tour 实景导览</a>
   <a href="#location" onclick="closeMobile()">Location 地点</a>
   <a href="#units" onclick="closeMobile()">Units 单位</a>
   <a href="#calculator" onclick="closeMobile()">Returns 回报</a>
@@ -690,6 +700,35 @@ footer{
     </div>
   </div>
 </section>
+
+
+<!-- 360 VR TOUR -->
+<section style="background:var(--navy);padding:0" id="vrtour">
+  <div style="padding:60px 80px 40px;text-align:center">
+    <span style="font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px;font-weight:500">360° Virtual Tour · 360度实景导览</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:8px">Experience Divine KLCC<br><em style="color:var(--gold)">Before It's Built</em></h2>
+    <p style="font-size:13px;color:rgba(255,255,255,.45);margin-bottom:0">Explore the showroom in full 360° · 全方位探索样板间实景</p>
+  </div>
+  <div style="position:relative;width:100%;padding-bottom:56.25%;overflow:hidden;background:var(--navy2)">
+    <iframe
+      src="https://vinceskycam.com/360/divine_klcc_vr/"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"
+      allowfullscreen
+      allow="xr-spatial-tracking; gyroscope; accelerometer"
+      loading="lazy"
+      title="Divine KLCC 360 Virtual Tour">
+    </iframe>
+  </div>
+  <div style="padding:16px 80px 48px;text-align:center">
+    <p style="font-size:10px;color:rgba(255,255,255,.25);font-style:italic">*360° virtual tour of Divine KLCC show unit. Drag to explore. Click fullscreen for best experience. · 拖动鼠标探索，点击全屏获得最佳体验。</p>
+  </div>
+</section>
+<style>
+@media(max-width:900px){
+  #vrtour div[style*="padding:60px 80px"]{padding:48px 24px 32px!important}
+  #vrtour div[style*="padding:16px 80px"]{padding:12px 24px 40px!important}
+}
+</style>
 
 <!-- UNITS -->
 <section class="sec sec-dark" id="units" style="padding-top:72px;padding-bottom:72px">
@@ -1392,4 +1431,3 @@ function submitForm(){
 </script>
 </body>
 </html>
-
