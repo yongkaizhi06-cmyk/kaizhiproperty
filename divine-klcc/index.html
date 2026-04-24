@@ -712,13 +712,22 @@ footer{
   </div>
   <div style="position:relative;width:100%;padding-bottom:56.25%;overflow:hidden;background:var(--navy2)">
     <iframe
+      id="vr-iframe"
       src="https://vinceskycam.com/360/divine_klcc_vr/"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;pointer-events:none"
       allowfullscreen
       allow="xr-spatial-tracking; gyroscope; accelerometer"
       loading="lazy"
       title="Divine KLCC 360 Virtual Tour">
     </iframe>
+    <div id="vr-overlay" onclick="activateVR()" style="position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(8,13,24,.35);z-index:10;transition:opacity .3s">
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(196,162,101,.2);border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:14px">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C4A265" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 5v2M12 17v2M5 12H3M21 12h-2M7.05 7.05 5.64 5.64M18.36 18.36l-1.41-1.41M7.05 16.95l-1.41 1.41M18.36 5.64l-1.41 1.41"/></svg>
+      </div>
+      <p style="color:var(--gold);font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Click to Explore 点击探索</p>
+      <p style="color:rgba(255,255,255,.4);font-size:11px">Click again to scroll / 再次点击可继续滚动</p>
+    </div>
+    <button id="vr-exit" onclick="deactivateVR()" style="display:none;position:absolute;bottom:50%;left:16px;transform:translateY(50%);z-index:20;background:rgba(8,13,24,.8);border:1px solid rgba(196,162,101,.4);color:var(--gold);padding:8px 16px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);writing-mode:initial">✕ Exit</button>
   </div>
   <div style="padding:16px 80px 48px;text-align:center">
     <p style="font-size:10px;color:rgba(255,255,255,.25);font-style:italic">*360° virtual tour of Divine KLCC show unit. Drag to explore. Click fullscreen for best experience. · 拖动鼠标探索，点击全屏获得最佳体验。</p>
@@ -1445,6 +1454,16 @@ function calc(){
 calc();
 
 // ── FORM ──
+function activateVR(){
+  document.getElementById('vr-iframe').style.pointerEvents='auto';
+  document.getElementById('vr-overlay').style.display='none';
+  document.getElementById('vr-exit').style.display='block';
+}
+function deactivateVR(){
+  document.getElementById('vr-iframe').style.pointerEvents='none';
+  document.getElementById('vr-overlay').style.display='flex';
+  document.getElementById('vr-exit').style.display='none';
+}
 function fpTab2(id,el){
   ['a1','b3','c','d'].forEach(k=>{
     const p=document.getElementById('fpp-'+k);
