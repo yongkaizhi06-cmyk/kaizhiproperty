@@ -167,6 +167,46 @@
             "@type": "Answer",
             "text": "Divine KLCC is developed by Sinaran Urusjuta Sdn Bhd, a property arm of Chin Hin Group — a Bursa Malaysia-listed integrated builder conglomerate spanning building materials, construction engineering, property development, and home & living."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can foreigners buy Divine KLCC? What is the minimum price threshold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Foreign buyers are eligible to purchase Divine KLCC units priced at RM 1,000,000 and above, in line with Malaysia's foreign ownership rules for Kuala Lumpur. Divine KLCC offers multiple unit configurations meeting this threshold across Type B, C, and D."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Divine KLCC offer rental management or Airbnb arrangement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Divine KLCC is managed by an Official Hotel Management Partner who handles pricing, cleaning, guest communications, and check-in/out. Owners receive net rental income after management fees, with no day-to-day landlord responsibilities required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is parking allocated at Divine KLCC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parking allocation depends on unit type. KLCC-view units receive 1 to 3 carpark bays per unit. Non-KLCC view units do not come with carpark bays. Single carpark bays are located between Level 4 and Level 11."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does payment work for Divine KLCC? Is it progressive billing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Divine KLCC buyers pay through progressive billing aligned with construction stages, regulated under Malaysia's Housing Development Act (HDA) Schedule H. Buyers do not pay the full price upfront — payment is released as each construction milestone is completed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about maintenance fees and service charges at Divine KLCC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maintenance fees and service charges are determined by the management corporation after vacant possession, based on actual operating costs of the facilities including security, common-area cleaning, lifts, infinity pool, and sky-bar. For up-to-date estimated figures, request the full sales kit from Kai Zhi Property."
+          }
         }
       ]
     }
@@ -658,6 +698,8 @@ footer{
     <li><a href="#calculator">Returns</a></li>
     <li><a href="#mm2h">MM2H</a></li>
     <li><a href="#vrtour">360° Tour</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#ebook" style="color:var(--gold)">eBook</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a class="nav-wa" href="https://wa.me/60183608853?text=%5BNav%5D%20Hi%20Kai%20Zhi%2C%20Divine%20KLCC%20inquiry%20from%20website." target="_blank">
@@ -678,6 +720,7 @@ footer{
   <a href="#calculator" onclick="closeMobile()">Returns 回报</a>
   <a href="#mm2h" onclick="closeMobile()">MM2H · 第二家园</a>
   <a href="#vrtour" onclick="closeMobile()" style="color:var(--gold2)">360° Virtual Tour 实景导览</a>
+  <a href="#faq" onclick="closeMobile()">FAQ · 常见问答</a>
   <a href="#ebook" onclick="closeMobile()" style="color:var(--gold);font-weight:500">📘 Free 24-Page Investor Guide · 免费 24 页指南</a>
   <a href="#contact" onclick="closeMobile()">Contact 联络</a>
   <a class="mobile-menu-wa" href="https://wa.me/60183608853?text=%5BMenu%5D%20Hi%20Kai%20Zhi%2C%20Divine%20KLCC%20inquiry%20from%20mobile%20menu." target="_blank">
@@ -1454,9 +1497,48 @@ footer{
           <div class="maple-d">Pricing · Cleaning · Guest comms · Check-in/out — all handled. You just collect returns.<br>定价 · 清洁 · 客户沟通 · 入住退房全包，您只需收租金。</div>
         </div>
       </div>
+
+      <!-- CALCULATOR → EBOOK FUNNEL -->
+      <a href="#ebook" class="calc-to-ebook">
+        <div class="cte-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4a2 2 0 012-2h9l5 5v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+        </div>
+        <div class="cte-text">
+          <strong>Want the full math? · 想看完整测算？</strong>
+          <em>Download our 24-page Investor Guide — 3 operating modes, 5/7/10-year exit scenarios, KLCC market comparison.<br>下载 24 页投资指南 — 3 种运营模式 · 5/7/10 年退出测算 · KLCC 市场对比。</em>
+        </div>
+        <span class="cte-cta">Get the Guide ↓</span>
+      </a>
     </div>
   </div>
 </section>
+<style>
+.calc-to-ebook{
+  display:flex;align-items:center;gap:18px;
+  margin-top:28px;padding:18px 24px;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
+  border:1px solid rgba(196,162,101,.3);
+  border-left:3px solid var(--gold);
+  text-decoration:none;color:inherit;
+  transition:all .25s var(--ease);
+}
+.calc-to-ebook:hover{
+  border-color:var(--gold);
+  transform:translateX(4px);
+  box-shadow:0 8px 32px rgba(8,13,24,.18);
+}
+.cte-icon{flex-shrink:0;color:var(--gold);display:flex;align-items:center}
+.cte-text{flex:1;min-width:0}
+.cte-text strong{display:block;font-size:14px;color:var(--white);font-weight:500;letter-spacing:.02em;margin-bottom:4px}
+.cte-text em{display:block;font-style:normal;font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.7}
+.cte-cta{flex-shrink:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);font-weight:500;white-space:nowrap}
+@media(max-width:640px){
+  .calc-to-ebook{flex-wrap:wrap;gap:12px;padding:14px 16px}
+  .cte-text strong{font-size:13px}
+  .cte-text em{font-size:11px}
+  .cte-cta{width:100%;text-align:left;padding-top:6px;border-top:1px solid rgba(196,162,101,.15)}
+}
+</style>
 
 
 <!-- MAPLE RESERVE -->
@@ -1679,6 +1761,10 @@ footer{
       <span style="font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px;font-weight:500">Free 24-Page Investor Analysis · 免费 24 页投资分析报告</span>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:8px">Honest Numbers,<br><em style="color:var(--gold)">Not a Sales Pitch</em></h2>
       <p style="font-size:13px;color:rgba(255,255,255,.45);margin-top:12px;line-height:1.7">24 页诚实分析 · 含投资数学 · 退出测算 · 风险评估<br>免费 · 即时发送 · 不签合约 · Free · Instant · No Obligation</p>
+      <div class="ebook-fresh-badge">
+        <span class="efb-dot"></span>
+        <span class="efb-text"><strong>Updated May 2026</strong> · Sources verified · 数据已核实更新</span>
+      </div>
     </div>
 
     <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch">
@@ -1773,6 +1859,34 @@ footer{
 </section>
 <style>
 /* ── EBOOK CTA CARD ── */
+.ebook-fresh-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:20px;padding:8px 18px;
+  background:rgba(196,162,101,.08);
+  border:1px solid rgba(196,162,101,.25);
+  border-radius:24px;
+}
+.efb-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#5cb85c;
+  box-shadow:0 0 0 0 rgba(92,184,92,.6);
+  animation:efb-pulse 2s ease-in-out infinite;
+  flex-shrink:0;
+}
+.efb-text{
+  font-size:11px;letter-spacing:.06em;
+  color:rgba(255,255,255,.7);
+}
+.efb-text strong{color:var(--gold2);font-weight:500;letter-spacing:.08em}
+@keyframes efb-pulse{
+  0%{box-shadow:0 0 0 0 rgba(92,184,92,.5)}
+  70%{box-shadow:0 0 0 8px rgba(92,184,92,0)}
+  100%{box-shadow:0 0 0 0 rgba(92,184,92,0)}
+}
+@media(max-width:640px){
+  .ebook-fresh-badge{padding:7px 14px}
+  .efb-text{font-size:10.5px}
+}
 .ebook-cta-card{
   position:relative;
   background:linear-gradient(160deg,var(--navy3) 0%,var(--navy) 70%);
@@ -1984,6 +2098,126 @@ footer{
     </div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section id="faq" style="padding:96px 0;background:var(--cream)">
+  <div style="max-width:980px;margin:0 auto;padding:0 24px">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <p style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dk,#9A7A3E);margin-bottom:12px">FAQ · 常见问答</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,52px);font-weight:300;color:var(--navy);margin-bottom:16px">Questions Buyers Ask<br><em style="font-style:italic;color:var(--gold-dk,#9A7A3E)">买家最关心的问题</em></h2>
+      <p style="font-size:12px;color:var(--mid);max-width:560px;margin:0 auto;line-height:1.8">Quick answers verified against the developer's official sales kit. For full details, request the <a href="#ebook" style="color:var(--gold-dk,#9A7A3E);text-decoration:underline">24-page Investor Guide</a>.<br><span style="font-size:11px">资料来源：发展商官方销售手册。完整资料请下载 24 页投资指南。</span></p>
+    </div>
+
+    <div class="reveal faq-list">
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">How far is Divine KLCC from Petronas Twin Towers? · 离双子塔多远？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Divine KLCC is 400 metres from Petronas Twin Towers — approximately 1 minute walk through a covered walkway connecting to the Jalan Ampang–KLCC junction.<br><span class="faq-cn">距离双子塔仅 400 米，约 1 分钟步行，经由通往 Jalan Ampang – KLCC 交汇处的有盖走道直达。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">What is the starting price of Divine KLCC? · 起价多少？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Divine KLCC starts from RM 968,000 (SPA price) for Type A2 units of 502 sqft. Larger Type D penthouse units extend to approximately RM 3.83 million.<br><span class="faq-cn">起价为 RM 968,000（SPA 价），适用于 502 sqft 的 A2 单位。较大的 D 型顶层单位价格约 RM 383 万。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">Is Divine KLCC eligible for MM2H? · 是否符合第二家园资格？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Yes. Divine KLCC unit types cover all three MM2H tiers — Silver (RM 600K+), Gold (RM 1M+), and Platinum (RM 2M+). Eligibility also requires meeting non-property MM2H criteria including fixed deposit and minimum stay.<br><span class="faq-cn">是的。Divine KLCC 单位价格涵盖 MM2H 全部三个等级 — 白银（RM 60 万+）、黄金（RM 100 万+）、白金（RM 200 万+）。申请人还须符合定存与最低居留天数等非房产条件。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">When will Divine KLCC be completed? · 何时交房？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Divine KLCC is scheduled for vacant possession (VP) in Q2 2032. Buyers pay through progressive billing aligned with construction stages under Malaysia HDA Schedule H.<br><span class="faq-cn">交房（VP）预计于 2032 年第二季度。买家依马来西亚 HDA Schedule H 规定，按工程进度分期付款。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">Who is the developer of Divine KLCC? · 发展商是谁？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Divine KLCC is developed by Sinaran Urusjuta Sdn Bhd, a property arm of Chin Hin Group — a Bursa Malaysia-listed integrated builder conglomerate spanning building materials, construction engineering, property development, and home & living.<br><span class="faq-cn">发展商为 Sinaran Urusjuta Sdn Bhd，隶属于马交所上市的 Chin Hin Group（成兴集团），业务涵盖建材、工程建设、房地产开发及家居生活。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">Can foreigners buy Divine KLCC? What is the minimum price threshold? · 外国人能买吗？最低门槛？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Yes. Foreign buyers are eligible to purchase Divine KLCC units priced at RM 1,000,000 and above, in line with Malaysia's foreign ownership rules for Kuala Lumpur. Divine KLCC offers multiple unit configurations meeting this threshold across Type B, C, and D.<br><span class="faq-cn">可以。外国买家可购买价值 RM 100 万以上的 Divine KLCC 单位，符合马来西亚吉隆坡外国人购房规定。B、C、D 型多款户型皆达到此门槛。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">Does Divine KLCC offer rental management or Airbnb arrangement? · 是否提供租赁/Airbnb 代管？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Yes. Divine KLCC is managed by an Official Hotel Management Partner who handles pricing, cleaning, guest communications, and check-in/out. Owners receive net rental income after management fees, with no day-to-day landlord responsibilities required.<br><span class="faq-cn">有的。Divine KLCC 由官方酒店管理合作伙伴全权代管，负责定价、清洁、客户沟通及入住退房。业主仅需收取扣除管理费后的净租金，无需亲力亲为。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">How is parking allocated at Divine KLCC? · 车位怎么分配？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Parking allocation depends on unit type. KLCC-view units receive 1 to 3 carpark bays per unit. Non-KLCC view units do not come with carpark bays. Single carpark bays are located between Level 4 and Level 11.<br><span class="faq-cn">车位依单位类型分配。面向 KLCC 视野的单位提供 1 至 3 个车位；非 KLCC 视野的单位不附带车位。单车位位于 4 至 11 楼。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">How does payment work? Is it progressive billing? · 付款进度怎么算？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Yes. Divine KLCC buyers pay through progressive billing aligned with construction stages, regulated under Malaysia's Housing Development Act (HDA) Schedule H. Buyers do not pay the full price upfront — payment is released as each construction milestone is completed.<br><span class="faq-cn">是的。Divine KLCC 采用马来西亚《房屋发展法令》(HDA) Schedule H 规定的工程进度付款方式。买家无需一次付清，每完成一个工程阶段才放款相应款项。</span></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-q">What about maintenance fees and service charges? · 维护费 + 服务费多少？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">Maintenance fees and service charges are determined by the management corporation after vacant possession, based on actual operating costs of the facilities including security, common-area cleaning, lifts, infinity pool, and sky-bar. For up-to-date estimated figures, request the full sales kit from Kai Zhi Property.<br><span class="faq-cn">维护费及服务费由管理机构于交房后依实际运营成本厘定，包含安保、公共区域清洁、电梯、无边际泳池、空中酒吧等。最新估算请向 Kai Zhi Property 索取完整销售资料。</span></div>
+      </details>
+
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:48px">
+      <p style="font-size:12px;color:var(--mid);margin-bottom:18px">Still have questions? Our agent responds within 24 hours.<br><span style="font-size:11px">还有疑问？我们的顾问 24 小时内回复。</span></p>
+      <a href="https://wa.me/60183608853?text=%5BFAQ%5D%20Hi%20Kai%20Zhi%2C%20I%20have%20a%20question%20about%20Divine%20KLCC." target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--gold2);padding:14px 30px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Ask on WhatsApp · WhatsApp 咨询
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid rgba(196,162,101,.22);border-left:3px solid var(--gold);transition:border-color .25s var(--ease)}
+.faq-item[open]{border-color:var(--gold);box-shadow:0 4px 24px rgba(8,13,24,.05)}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 26px;cursor:pointer;list-style:none;user-select:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-q{font-family:var(--serif);font-size:18px;color:var(--navy);font-weight:400;line-height:1.4}
+.faq-icon{flex-shrink:0;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(196,162,101,.4);color:var(--gold-dk,#9A7A3E);font-size:18px;font-weight:300;transition:transform .3s var(--ease)}
+.faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--gold);color:#fff;border-color:var(--gold)}
+.faq-a{padding:4px 26px 22px;font-size:13px;color:var(--mid);line-height:1.85;border-top:1px solid rgba(196,162,101,.12);margin-top:-4px;padding-top:18px}
+.faq-cn{display:inline-block;margin-top:6px;font-size:12px;color:#8a8a8a}
+@media(max-width:640px){
+  .faq-item summary{padding:16px 18px;gap:12px}
+  .faq-q{font-size:15px}
+  .faq-a{padding:14px 18px 18px;font-size:12.5px}
+}
+</style>
 
 <!-- CONTACT -->
 <section class="sec sec-dark" id="contact" style="border-top:1px solid rgba(196,162,101,.12)">
@@ -2199,3 +2433,4 @@ function showFurn(t){
 
 </body>
 </html>
+
