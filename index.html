@@ -247,7 +247,7 @@ footer{background:#1f2937;padding:40px 40px 24px}
   .stat-num{font-size:1.1rem}
 
   /* MAIN WRAP — full width, no sidebar */
-  .main-wrap{padding:20px 16px;grid-template-columns:1fr;gap:0}
+  .main-wrap{padding:20px 16px;grid-template-columns:minmax(0,1fr);gap:0}.main-wrap>*{min-width:0}
 
   /* SECTION TITLES */
   .sec-title{font-size:1rem}
@@ -261,7 +261,7 @@ footer{background:#1f2937;padding:40px 40px 24px}
     padding-bottom:8px;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
-    grid-template-columns:unset;
+    grid-template-columns:unset;min-width:0;
   }
   .listings-grid::-webkit-scrollbar{display:none}
   .listing-card{
@@ -572,7 +572,7 @@ footer{background:#1f2937;padding:40px 40px 24px}
         <a href="#contact" class="sec-link">View All →</a>
       </div>
       <div class="listings-grid">
-        <a href="#contact" class="listing-card">
+        <a href="https://wa.me/60183608853?text=Hi%20Yong%20Kai%20Zhi%2C%20I%20am%20interested%20in%20the%20Superlink%20House%20%40%20Setia%20Alam%20(RM1.1m)" class="listing-card" target="_blank" rel="noopener">
           <div class="listing-img" style="background:linear-gradient(135deg,#e8f0f8,#d0e4f4)">
             <div class="listing-img-text" style="color:#2b6cb0">Setia Alam</div>
             <div class="listing-badge badge-subsale">Subsale</div>
@@ -592,7 +592,7 @@ footer{background:#1f2937;padding:40px 40px 24px}
             <span class="listing-enquire">Enquire →</span>
           </div>
         </a>
-        <a href="#contact" class="listing-card">
+        <a href="https://wa.me/60183608853?text=Hi%20Yong%20Kai%20Zhi%2C%20I%20am%20interested%20in%20Landmark%20Residence%2C%20Kajang%20(RM480k)" class="listing-card" target="_blank" rel="noopener">
           <div class="listing-img" style="background:linear-gradient(135deg,#f0e8f8,#e4d0f4)">
             <div class="listing-img-text" style="color:#6b2bb0">Landmark Kajang</div>
             <div class="listing-badge badge-subsale">Subsale</div>
