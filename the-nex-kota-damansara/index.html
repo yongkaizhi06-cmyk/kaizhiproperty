@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<link rel="preload" as="image" href="images/nex-facade.webp" fetchpriority="high" />
 <!-- The NeX, Kota Damansara · landing page · Kai Zhi Property · build v1.0 -->
 <meta name="robots" content="index,follow" />
 <title>The NeX, Kota Damansara — Next-Gen Industrial Hub by Chin Hin | Kai Zhi Property</title>
@@ -61,7 +62,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" /></noscript>
 <style>
   :root{
     --void:#0e0722; --indigo:#180d3c; --indigo-2:#241456; --panel:#1c1142;
@@ -177,7 +179,7 @@
   /* ===== DRIVE-UP signature ===== */
   .driveup{background:linear-gradient(180deg,#0b0520,#160c38);}
   .du-stage{margin-top:38px; border-radius:22px; overflow:hidden; position:relative; border:1px solid var(--line); box-shadow:0 50px 90px -50px #000;}
-  .du-stage img{width:100%; display:block;}
+  .du-stage img{width:100%; display:block; aspect-ratio:16/9; object-fit:cover;}
   .du-stage::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(11,5,32,.55),transparent 40%);}
   .chev{position:absolute; left:0; top:0; height:100%; width:100%; pointer-events:none; z-index:2;}
   .chev span{position:absolute; font-family:var(--disp); font-weight:700; color:var(--amber); opacity:0; font-size:clamp(16px,2.4vw,26px); animation:climb 3.4s linear infinite;}
@@ -237,7 +239,7 @@
 
   /* ===== LOCATION ===== */
   .loc-img{margin-top:38px; border-radius:20px; overflow:hidden; border:1px solid var(--line); box-shadow:0 40px 80px -44px #000; cursor:zoom-in;}
-  .loc-img img{width:100%; display:block;}
+  .loc-img img{width:100%; display:block; aspect-ratio:16/9; object-fit:cover;}
   .loc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:26px;}
   @media(max-width:820px){.loc-grid{grid-template-columns:1fr;}}
   .loc-card{border:1px solid var(--line); border-radius:16px; padding:22px; background:rgba(255,255,255,.03);}
@@ -375,7 +377,7 @@
 
 <!-- ===== HERO ===== -->
 <header class="hero">
-  <div class="hero-bg" aria-hidden="true"><img src="images/nex-facade.jpg" alt="The NeX Kota Damansara — 9-storey industrial hub facade at dusk" fetchpriority="high" /></div>
+  <div class="hero-bg" aria-hidden="true"><img src="images/nex-facade.webp" width="1098" height="1124" alt="The NeX Kota Damansara — 9-storey industrial hub facade at dusk" fetchpriority="high" /></div>
   <div class="beams" aria-hidden="true"><span class="beam a"></span><span class="beam b"></span></div>
   <div class="in">
     <p class="h-kick" data-i18n="h_kick">Chin Hin · Jalan Teknologi, Kota Damansara</p>
