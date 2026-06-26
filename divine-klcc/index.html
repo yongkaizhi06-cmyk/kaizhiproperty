@@ -229,50 +229,6 @@ html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--white);color:var(--dark);font-family:var(--sans);line-height:1.65;overflow-x:hidden;max-width:100vw}
 
 /* ── CUSTOM CURSOR (desktop only) ────────────────── */
-@media (hover:hover) and (pointer:fine){
-  body{cursor:none}
-  a, button, input, select, textarea, .calc-tab, .furn-btn, summary, [onclick], [role="button"]{cursor:none}
-  .kz-cursor{
-    position:fixed;top:0;left:0;z-index:9999;pointer-events:none;
-    width:8px;height:8px;border-radius:50%;
-    background:var(--gold);
-    transform:translate(-50%,-50%);
-    transition:width .25s var(--ease), height .25s var(--ease), background .25s var(--ease), opacity .2s ease;
-    mix-blend-mode:normal;
-  }
-  .kz-cursor-ring{
-    position:fixed;top:0;left:0;z-index:9998;pointer-events:none;
-    width:32px;height:32px;border-radius:50%;
-    border:1px solid rgba(196,162,101,.55);
-    transform:translate(-50%,-50%);
-    transition:width .3s var(--ease), height .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease), opacity .2s ease;
-  }
-  .kz-cursor.hover{
-    width:0;height:0;opacity:0;
-  }
-  .kz-cursor-ring.hover{
-    width:46px;height:46px;
-    background:rgba(196,162,101,.18);
-    border-color:var(--gold);
-    border-width:1.5px;
-  }
-  .kz-cursor.hidden, .kz-cursor-ring.hidden{opacity:0}
-
-  /* ── 金色拖尾粒子 · Gold Dust Trail ── */
-  .kz-trail{
-    position:fixed;z-index:9997;pointer-events:none;
-    width:5px;height:5px;border-radius:50%;
-    background:radial-gradient(circle, var(--gold) 0%, rgba(196,162,101,.4) 60%, transparent 100%);
-    transform:translate(-50%,-50%);
-    animation:kzTrail .9s cubic-bezier(.22,.61,.36,1) forwards;
-    will-change:transform, opacity;
-  }
-  @keyframes kzTrail{
-    0%   { opacity:.85; transform:translate(-50%,-50%) scale(1); }
-    40%  { opacity:.5; }
-    100% { opacity:0; transform:translate(-50%,-50%) scale(.15) translateY(14px); }
-  }
-}
 img,svg{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 button{font-family:var(--sans);cursor:pointer;border:none;outline:none}
@@ -732,7 +688,7 @@ footer{
 
 </style>
 </head>
-<body>
+<body class="lang-en">
 
 <!-- ── LANGUAGE TOGGLE (EN / 中文 / BM) ── -->
 <style>
@@ -742,14 +698,11 @@ footer{
 .lang-btn:hover:not(.active){color:var(--gold3,#EDD9AB)}
 .lang-switch-m{display:flex;gap:6px;margin:4px 0 10px}
 .lang-switch-m .lang-btn{flex:1;border:1px solid rgba(196,162,101,.3);text-align:center;font-size:12px;padding:9px 0}
-/* show only the active language */
-.tr-zh,.tr-bm,.a-zh{display:none}
-body.lang-zh .tr-en{display:none}
-body.lang-zh .tr-zh{display:revert}
-body.lang-zh .a-en{display:none}
-body.lang-zh .a-zh{display:revert}
-body.lang-bm .tr-en{display:none}
-body.lang-bm .tr-bm{display:revert}
+/* show only the active language — scoped hide-only (never forces a display value,
+   so each element keeps its natural inline/block layout; !important beats component rules) */
+body.lang-en .tr-zh, body.lang-en .tr-bm, body.lang-en .a-zh,
+body.lang-zh .tr-en, body.lang-zh .tr-bm, body.lang-zh .a-en,
+body.lang-bm .tr-en, body.lang-bm .tr-zh, body.lang-bm .a-zh{display:none!important}
 </style>
 
 <!-- NAV -->
@@ -912,7 +865,7 @@ body.lang-bm .tr-bm{display:revert}
 </div>
 <div style="background:var(--navy)" class="feat-blk">
   <div class="feat-blk-inner">
-    <span class="tag-sm">Level 80 · Signature Feature · 标志性设施</span>
+    <span class="tag-sm"><span class="tr-en">Level 80 · Signature Feature</span><span class="tr-zh">Level 80 · 标志性设施</span><span class="tr-bm">Level 80 · Ciri Istimewa</span></span>
     <h2 class="feat-h" style="color:var(--white)">Infinity Lap Pool<br><em style="color:var(--gold)">Facing the Twin Towers</em></h2>
     <p class="feat-d" style="color:rgba(255,255,255,.75)">The only residence in KLCC with an infinity pool offering direct, unobstructed views of the Petronas Twin Towers. Not beside them. Not near them. <strong style="color:var(--gold2)">Facing them.</strong></p>
     <p class="feat-cn" style="color:rgba(255,255,255,.5)">KLCC唯一无边际泳池直面双峰塔的住宅——不是在旁边，而是正对面。全KL最热打卡地点。</p>
@@ -924,7 +877,7 @@ body.lang-bm .tr-bm{display:revert}
 <div style="display:grid;grid-template-columns:1fr 1fr;background:var(--cream)">
   <div class="feat-blk">
     <div class="feat-blk-inner">
-      <span class="tag-sm">Level 81–Rooftop · SE Asia's Tallest · 东南亚最高</span>
+      <span class="tag-sm"><span class="tr-en">Level 81–Rooftop · SE Asia's Tallest</span><span class="tr-zh">Level 81–顶层 · 东南亚最高</span><span class="tr-bm">Level 81–Bumbung · Tertinggi SE Asia</span></span>
       <h2 class="feat-h" style="color:var(--navy)">360° Rooftop<br><em style="color:var(--gold-dk,#9A7A3E)">Sky Bar</em></h2>
       <p class="feat-d" style="color:#333">Southeast Asia's highest rooftop bar — a triple-level crown spanning Levels 81 to Rooftop, offering uninterrupted 360° views across Kuala Lumpur. A destination that elevates the entire building's prestige.</p>
       <p class="feat-cn" style="color:#777">东南亚最高三层式天台酒吧，Level 81至顶层，360度无敌全景。目的地级配套，提升整栋大楼声望。</p>
@@ -967,7 +920,7 @@ body.lang-bm .tr-bm{display:revert}
 <section class="sec" id="location">
   <div class="grid2">
     <div class="reveal">
-      <span class="tag">01 · Prime Location · 黄金地段</span>
+      <span class="tag"><span class="tr-en">01 · Prime Location</span><span class="tr-zh">01 · 黄金地段</span><span class="tr-bm">01 · Lokasi Utama</span></span>
       <h2 class="h2">The Heart of<br>Kuala Lumpur</h2>
       <p class="h2-cn">吉隆坡心脏地带</p>
       <div class="rule"></div>
@@ -990,12 +943,12 @@ body.lang-bm .tr-bm{display:revert}
     </div>
     <div class="reveal">
       <div class="feat-grid">
-        <div class="feat"><div class="feat-icon icon-pool"></div><div class="feat-t">Infinity Pool · KLCC View</div><p class="feat-d">Level 80 infinity lap pool with unobstructed Twin Towers views. Instagram's most-wanted shot in KL.</p><p class="feat-cn">Level 80无边际泳池，直面双峰塔（全KL最热打卡地点）</p></div>
-        <div class="feat"><div class="feat-icon icon-bar"></div><div class="feat-t">SE Asia's Tallest Sky Bar</div><p class="feat-d">Triple-level 360° rooftop bar on Levels 81 to Rooftop — the city's highest social destination.</p><p class="feat-cn">东南亚最高360度天台酒吧，Level 81至天台</p></div>
-        <div class="feat"><div class="feat-icon icon-walk"></div><div class="feat-t">Covered Walkway</div><p class="feat-d">Sheltered connection to Jalan Ampang–KLCC junction. Walk rain or shine, every single day.</p><p class="feat-cn">有盖走廊直通KLCC路口，风雨无阻</p></div>
-        <div class="feat"><div class="feat-icon icon-concierge"></div><div class="feat-t">Hotel-Style Concierge</div><p class="feat-d">Smart kiosk check-in/out for residents and guests. 24/7 concierge services.</p><p class="feat-cn">智能入住系统，24小时管家服务</p></div>
-        <div class="feat"><div class="feat-icon icon-smart"></div><div class="feat-t">Smart Home Built-In</div><p class="feat-d">Smart curtains, lighting scenes, smart TV and switch panel in every unit.</p><p class="feat-cn">智能窗帘、灯光场景控制、智能电视，每户标配</p></div>
-        <div class="feat"><div class="feat-icon icon-green"></div><div class="feat-t">GreenRE Gold</div><p class="feat-d">Certified sustainable development. Tinted windows. Automated waste collection.</p><p class="feat-cn">绿色建筑金级认证，可持续发展</p></div>
+        <div class="feat"><div class="feat-icon icon-pool"></div><div class="feat-t"><span class="tr-en">Infinity Pool · KLCC View</span><span class="tr-zh">无边际泳池 · 双峰塔景</span><span class="tr-bm">Kolam Infiniti · Pemandangan KLCC</span></div><p class="feat-d">Level 80 infinity lap pool with unobstructed Twin Towers views. Instagram's most-wanted shot in KL.</p><p class="feat-cn">Level 80无边际泳池，直面双峰塔（全KL最热打卡地点）</p></div>
+        <div class="feat"><div class="feat-icon icon-bar"></div><div class="feat-t"><span class="tr-en">SE Asia's Tallest Sky Bar</span><span class="tr-zh">东南亚最高天台酒吧</span><span class="tr-bm">Sky Bar Tertinggi SE Asia</span></div><p class="feat-d">Triple-level 360° rooftop bar on Levels 81 to Rooftop — the city's highest social destination.</p><p class="feat-cn">东南亚最高360度天台酒吧，Level 81至天台</p></div>
+        <div class="feat"><div class="feat-icon icon-walk"></div><div class="feat-t"><span class="tr-en">Covered Walkway</span><span class="tr-zh">有盖走廊</span><span class="tr-bm">Laluan Berbumbung</span></div><p class="feat-d">Sheltered connection to Jalan Ampang–KLCC junction. Walk rain or shine, every single day.</p><p class="feat-cn">有盖走廊直通KLCC路口，风雨无阻</p></div>
+        <div class="feat"><div class="feat-icon icon-concierge"></div><div class="feat-t"><span class="tr-en">Hotel-Style Concierge</span><span class="tr-zh">酒店式礼宾服务</span><span class="tr-bm">Konsierj Gaya Hotel</span></div><p class="feat-d">Smart kiosk check-in/out for residents and guests. 24/7 concierge services.</p><p class="feat-cn">智能入住系统，24小时管家服务</p></div>
+        <div class="feat"><div class="feat-icon icon-smart"></div><div class="feat-t"><span class="tr-en">Smart Home Built-In</span><span class="tr-zh">智能家居标配</span><span class="tr-bm">Rumah Pintar Terbina</span></div><p class="feat-d">Smart curtains, lighting scenes, smart TV and switch panel in every unit.</p><p class="feat-cn">智能窗帘、灯光场景控制、智能电视，每户标配</p></div>
+        <div class="feat"><div class="feat-icon icon-green"></div><div class="feat-t"><span class="tr-en">GreenRE Gold</span><span class="tr-zh">GreenRE 绿色金级认证</span><span class="tr-bm">GreenRE Emas</span></div><p class="feat-d">Certified sustainable development. Tinted windows. Automated waste collection.</p><p class="feat-cn">绿色建筑金级认证，可持续发展</p></div>
       </div>
       <p style="font-size:10px;color:var(--mid);margin-top:10px">* Subject to unit selected.</p>
     </div>
@@ -1006,20 +959,20 @@ body.lang-bm .tr-bm{display:revert}
 <section class="sec sec-dark">
   <div style="max-width:1100px;margin:0 auto">
     <div class="reveal" style="text-align:center;margin-bottom:60px">
-      <span class="tag">02 · Iconic Features · 标志性亮点</span>
+      <span class="tag"><span class="tr-en">02 · Iconic Features</span><span class="tr-zh">02 · 标志性亮点</span><span class="tr-bm">02 · Ciri Ikonik</span></span>
       <h2 class="h2" style="color:var(--white)">What Makes Divine KLCC<br>Truly Unforgettable</h2>
       <p class="h2-cn">令Divine KLCC真正令人难忘的原因</p>
     </div>
     <div class="sig-features reveal">
       <div class="sig-feat">
         <div class="sig-feat-icon">🏊</div>
-        <div class="sig-feat-t">Infinity Pool Facing<br>Petronas Twin Towers</div>
+        <div class="sig-feat-t"><span class="tr-en">Infinity Pool Facing<br>Petronas Twin Towers</span><span class="tr-zh">无边际泳池<br>正对双峰塔</span><span class="tr-bm">Kolam Infiniti Menghadap<br>Menara Berkembar Petronas</span></div>
         <p class="sig-feat-d">The only residence in KLCC with an infinity lap pool at Level 80 offering unobstructed, direct-facing views of the Petronas Twin Towers. Not beside them. Not near them. Facing them.</p>
         <p class="sig-feat-cn">KLCC唯一无边际泳池直面双峰塔的住宅——不是在旁边，而是正对面。</p>
       </div>
       <div class="sig-feat">
         <div class="sig-feat-icon">🍸</div>
-        <div class="sig-feat-t">Southeast Asia's Tallest<br>360° Rooftop Sky Bar</div>
+        <div class="sig-feat-t"><span class="tr-en">Southeast Asia's Tallest<br>360° Rooftop Sky Bar</span><span class="tr-zh">东南亚最高<br>360° 天台酒吧</span><span class="tr-bm">Sky Bar Bumbung 360°<br>Tertinggi Asia Tenggara</span></div>
         <p class="sig-feat-d">A triple-level crown spanning Levels 81 to Rooftop, offering uninterrupted 360-degree views across Kuala Lumpur. A destination that elevates every unit below it.</p>
         <p class="sig-feat-cn">东南亚最高三层式天台酒吧，Level 81至顶层，360度无敌全景，提升楼下每个单位的价值。</p>
       </div>
@@ -1075,7 +1028,7 @@ body.lang-bm .tr-bm{display:revert}
 <section class="sec sec-dark" id="units" style="padding-top:72px;padding-bottom:72px">
   <div style="max-width:1200px;margin:0 auto">
     <div class="reveal">
-      <span class="tag">03 · Units & Pricing · 单位类型与售价</span>
+      <span class="tag"><span class="tr-en">03 · Units & Pricing</span><span class="tr-zh">03 · 单位类型与售价</span><span class="tr-bm">03 · Unit & Harga</span></span>
       <h2 class="h2" style="color:var(--white)">Choose Your<br>Elevation</h2>
       <p class="h2-cn">选择您的高度</p>
       <div class="rule"></div>
@@ -1138,14 +1091,14 @@ body.lang-bm .tr-bm{display:revert}
     </div>
   </div>
   <div class="units-note reveal">
-    <p>All prices are SPA gross prices inclusive of SPA legal fees and loan documentation fees. Booking fee RM 3,000. KLCC-view units require a valid bank loan offer letter upon booking. <strong>Prices and terms subject to change without notice. Please verify all details with the developer's sales team before making any booking decision.</strong><br>以上均为SPA总价，含SPA及贷款法律费。订金RM 3,000。面向KLCC单位须提供银行贷款批准函。<strong>以上价格及条款随时可能更改，请在预订前向发展商销售团队核实所有细节。</strong></p>
+    <p><span class="a-en">All prices are SPA gross prices inclusive of SPA legal fees and loan documentation fees. Booking fee RM 3,000. KLCC-view units require a valid bank loan offer letter upon booking. <strong>Prices and terms subject to change without notice. Please verify all details with the developer's sales team before making any booking decision.</strong></span><span class="a-zh">以上均为SPA总价，含SPA及贷款法律费。订金RM 3,000。面向KLCC单位须提供银行贷款批准函。<strong>以上价格及条款随时可能更改，请在预订前向发展商销售团队核实所有细节。</strong></span></p>
   </div>
 </section>
 
 <!-- FLOOR PLANS -->
 <section class="sec sec-cream" id="floorplans">
   <div class="reveal">
-    <span class="tag">03 · Floor Plans · 平面图</span>
+    <span class="tag"><span class="tr-en">04 · Floor Plans</span><span class="tr-zh">04 · 平面图</span><span class="tr-bm">04 · Pelan Lantai</span></span>
     <h2 class="h2">Crafted Layouts</h2>
     <p class="h2-cn">精心规划的生活空间</p>
     <div class="rule"></div>
@@ -1173,7 +1126,7 @@ body.lang-bm .tr-bm{display:revert}
           <div style="display:grid;grid-template-columns:1fr 1fr;padding:13px 0;border-bottom:1px solid rgba(0,0,0,.07)"><span style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid)">Carpark</span><span style="font-size:13px;font-weight:500;color:var(--navy)">Not included</span></div>
           <div style="display:grid;grid-template-columns:1fr 1fr;padding:16px 0"><span style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid)">From</span><span style="font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold-dk,#9A7A3E);font-weight:300">RM 968,000</span></div>
         </div>
-        <p style="font-size:12px;color:var(--mid);line-height:1.9;margin-top:14px">Ideal for solo professionals or couples. The +1 flex room works as a study, guest room, or second bedroom. Strong rental demand from the KLCC corporate crowd.<br><br><span style="font-size:11px;color:rgba(0,0,0,.35)">适合专业人士或夫妻，+1弹性房间可作书房或客房，深受KLCC企业租客追捧。</span></p>
+        <p style="font-size:12px;color:var(--mid);line-height:1.9;margin-top:14px"><span class="a-en">Ideal for solo professionals or couples. The +1 flex room works as a study, guest room, or second bedroom. Strong rental demand from the KLCC corporate crowd.</span><span class="a-zh" style="font-size:11px;color:rgba(0,0,0,.35)">适合专业人士或夫妻，+1弹性房间可作书房或客房，深受KLCC企业租客追捧。</span></p>
       </div>
     </div>
 
@@ -1524,7 +1477,7 @@ body.lang-bm .tr-bm{display:revert}
 <section class="sec sec-dark" id="invest">
   <div class="grid2">
     <div class="reveal">
-      <span class="tag">05 · Investment Case · 投资分析</span>
+      <span class="tag"><span class="tr-en">06 · Investment Case</span><span class="tr-zh">06 · 投资分析</span><span class="tr-bm">06 · Analisis Pelaburan</span></span>
       <h2 class="h2" style="color:var(--white)">Why Foreign<br>Investors Choose KLCC</h2>
       <p class="h2-cn">外国投资者为何选择KLCC</p>
       <div class="rule"></div>
@@ -1585,7 +1538,7 @@ body.lang-bm .tr-bm{display:revert}
 
 <div style="max-width:1100px;margin:0 auto">
     <div class="reveal" style="margin-bottom:8px">
-      <span class="tag">06 · KLCC Market Overview · 市场概览</span>
+      <span class="tag"><span class="tr-en">07 · KLCC Market Overview</span><span class="tr-zh">07 · 市场概览</span><span class="tr-bm">07 · Tinjauan Pasaran</span></span>
       <h2 class="h2" style="color:var(--white)">KLCC Corridor<br>Market Overview</h2>
       <p class="h2-cn">KLCC走廊市场概览</p>
       <div class="rule"></div>
@@ -2215,7 +2168,7 @@ body.lang-bm .tr-bm{display:revert}
 <section class="sec sec-dark" id="contact" style="border-top:1px solid rgba(196,162,101,.12)">
   <div class="contact-wrap">
     <div class="reveal">
-      <span class="tag">07 · Contact Us · 联络我们</span>
+      <span class="tag"><span class="tr-en">08 · Contact Us</span><span class="tr-zh">08 · 联络我们</span><span class="tr-bm">08 · Hubungi Kami</span></span>
       <h2 class="h2" style="color:var(--white)">Get the Full<br>Picture</h2>
       <p class="h2-cn">获取完整资料包</p>
       <div class="rule"></div>
@@ -2290,51 +2243,8 @@ body.lang-bm .tr-bm{display:revert}
 
 <script>
 // ── CUSTOM CURSOR (desktop only) ──
-(function(){
-  if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
-  const dot=document.createElement('div'); dot.className='kz-cursor';
-  const ring=document.createElement('div'); ring.className='kz-cursor-ring';
-  document.body.appendChild(dot); document.body.appendChild(ring);
-  let mx=0,my=0,rx=0,ry=0;
-  let lastTrail=0;
-  document.addEventListener('mousemove',e=>{
-    mx=e.clientX; my=e.clientY;
-    dot.style.left=mx+'px'; dot.style.top=my+'px';
-    // spawn gold-dust trail particle (throttled ~28ms ≈ 35 particles/sec)
-    const now=performance.now();
-    if(now-lastTrail>28){
-      lastTrail=now;
-      const t=document.createElement('div');
-      t.className='kz-trail';
-      // tiny random offset so trail doesn't look mechanical
-      t.style.left=(mx+(Math.random()-.5)*6)+'px';
-      t.style.top=(my+(Math.random()-.5)*6)+'px';
-      // varied size for organic feel (3–6px)
-      const s=3+Math.random()*3;
-      t.style.width=s+'px'; t.style.height=s+'px';
-      document.body.appendChild(t);
-      setTimeout(()=>t.remove(),900);
-    }
-  },{passive:true});
-  // ring follows with subtle easing
-  function tick(){
-    rx+=(mx-rx)*.18; ry+=(my-ry)*.18;
-    ring.style.left=rx+'px'; ring.style.top=ry+'px';
-    requestAnimationFrame(tick);
-  }
-  tick();
-  // hover state on interactive elements
-  const hoverSel='a,button,input,select,textarea,.calc-tab,.furn-btn,summary,[onclick],[role="button"]';
-  document.addEventListener('mouseover',e=>{
-    if(e.target.closest(hoverSel)){dot.classList.add('hover');ring.classList.add('hover');}
-  });
-  document.addEventListener('mouseout',e=>{
-    if(e.target.closest(hoverSel)){dot.classList.remove('hover');ring.classList.remove('hover');}
-  });
-  // hide when leaving viewport
-  document.addEventListener('mouseleave',()=>{dot.classList.add('hidden');ring.classList.add('hidden');});
-  document.addEventListener('mouseenter',()=>{dot.classList.remove('hidden');ring.classList.remove('hidden');});
-})();
+/* custom cursor removed - default cursor */
+
 
 // ── NAV SCROLL ──
 window.addEventListener('scroll',function(){
@@ -2482,6 +2392,32 @@ function setLang(l){
     if(prev.querySelector('.tr-en,.tr-zh,.tr-bm')||prev.classList.contains('a-zh'))return;
     el.classList.add('a-zh');
     if(!prev.classList.contains('a-en'))prev.classList.add('a-en');
+  });
+  // Pass 3 — inline "English ... <span>中文</span>": wrap the leading English, tag the trailing 中文
+  document.querySelectorAll('p').forEach(function(el){
+    if(el.classList.contains('a-en')||el.classList.contains('a-zh'))return;
+    if(el.querySelector('.tr-en,.tr-zh,.tr-bm,.a-en,.a-zh'))return;
+    if(el.closest('nav,.mobile-menu,footer,.lang-switch,.lang-switch-m'))return;
+    var last=el.lastElementChild;
+    if(!last||!/^(SPAN|EM|B|I)$/.test(last.tagName)||cjk(last)<0.5)return;
+    var before='';el.childNodes.forEach(function(n){if(n!==last)before+=(n.textContent||'');});
+    var beforeTrim=before.replace(/\s/g,'');
+    if(!/[A-Za-z]{4}/.test(before)||(beforeTrim.match(/[一-鿿]/g)||[]).length>beforeTrim.length*0.3)return;
+    var w=document.createElement('span');w.className='a-en';
+    while(el.firstChild&&el.firstChild!==last){w.appendChild(el.firstChild);}
+    el.insertBefore(w,last);
+    last.classList.add('a-zh');
+  });
+  // Pass 4 — "English · 中文" single-line labels (FAQ questions): split at first 中文 char
+  document.querySelectorAll('.faq-q').forEach(function(el){
+    if(el.children.length||el.classList.contains('a-en'))return;
+    var t=el.textContent; var m=t.match(/[一-鿿]/); if(!m)return;
+    var i=t.indexOf(m[0]);
+    var en=t.slice(0,i).replace(/[\s·•]+$/,''); var zh=t.slice(i).trim();
+    if(!en||!zh)return;
+    var se=document.createElement('span');se.className='a-en';se.textContent=en;
+    var sz=document.createElement('span');sz.className='a-zh';sz.textContent=zh;
+    el.textContent='';el.appendChild(se);el.appendChild(sz);
   });
 })();
 (function(){var s=null;try{s=localStorage.getItem('divine_lang');}catch(e){}setLang(s||'en');})();
